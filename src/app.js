@@ -7,6 +7,14 @@ import compression from 'compression';
 import cookieParser from 'cookie-parser';
 
 const app = express();
+
+/*
+
+For docker usage, use mongo as the connector url
+For local usage, use your mongodb url in place of mongo
+
+*/
+
 const MONGO_URI = 'mongodb://mongo/intern';
 const MongoStore = require('connect-mongo')(session);
 

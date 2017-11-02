@@ -59,7 +59,7 @@ To test the server running properly, a http request has to be sent to the server
 curl http://localhost:3000/test
 ```
 
-the response will be
+The response will be
 ```
 {"message":"Everything's OK"}
 ```
@@ -68,11 +68,22 @@ the response will be
 
 All the following paths will be added after the base url http://localhost:3000/
 
-- [user/signup](http://localhost:3000/user/signup) - To create a new user
+- [user/signup](http://localhost:3000/user/signup) - To create a new user send **POST** request
+    - Required fields: ```username``` and ```password```
+    - User details are stored in the collection ```users```
+
+- [user/signin](http://localhost:3000/user/signin) - To login send **POST** request
+    - Required fields: ```username``` and ```password```
+
+- [user/signout](http://localhost:3000/user/signout) - To logout send **GET** request
+
+## Check User Authentication
+
+After a successfull login, user id is stored in session as well as in the local mongodb with the collection name ```sessions```, to access it use ```req.session._id``` which can be used to fetch details from the db 
 
 ## Authors
 
-Built from scratch by Fizan Nagarchi
+Built from scratch by ```Fizan Nagarchi```
 
 ## License
 

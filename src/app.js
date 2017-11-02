@@ -47,6 +47,10 @@ import Routes from './Routes';
 
 app.use('/user', Routes.user);
 
+app.get('/test', (req, res) => {
+	res.status(200).send({'message': 'Everything\'s OK'});
+});
+
 app.listen((process.env.PORT || 3000), () => {
 	console.log('Server started at port 3000');
 });

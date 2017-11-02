@@ -1,0 +1,41 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "Basic Auth skeleton",
+  "main": "app.js",
+  "scripts": {
+    "test": "node src/app.js --exec babel-node --presets env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/senora2904/auth-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "auth"
+  ],
+  "author": "Fizan Nagarchi",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/senora2904/auth-node#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongoose": "^4.10.5",
+    "morgan": "^1.8.2",
+    "sha.js": "^2.4.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0"
+  }
+}

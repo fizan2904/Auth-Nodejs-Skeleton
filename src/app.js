@@ -1,4 +1,3 @@
-import morgan from 'morgan';
 import express from 'express';
 import mongoose from 'mongoose';
 import models from './Models';
@@ -8,7 +7,7 @@ import compression from 'compression';
 import cookieParser from 'cookie-parser';
 
 const app = express();
-const MONGO_URI = 'mongodb://localhost/intern';
+const MONGO_URI = 'mongodb://mongo/intern';
 const MongoStore = require('connect-mongo')(session);
 
 mongoose.Promise = global.Promise;
@@ -21,7 +20,6 @@ mongoose.connection
 		console.log('Success establishing connection');
 	});
 
-app.use(morgan('dev'));
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));

@@ -16,7 +16,7 @@
     "auth"
   ],
   "author": "Fizan Nagarchi",
-  "license": "MIT",
+  "license": "ISC",
   "homepage": "https://bitbucket.org/senora2904/auth-node#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
